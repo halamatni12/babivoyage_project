@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "871609276040",
+    "project_id": "babibeauty-app-f69d9",
+    "storage_bucket": "babibeauty-app-f69d9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871609276040:android:1e2618fd97480a8baa713d",
+        "android_client_info": {
+          "package_name": "com.example.babibeauty_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871609276040-egs6207rnh8cpugt06p1m5j1ip4l8prk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCwX1VQc745Jp62ecZ3TNRdl6puW-6BdI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871609276040-egs6207rnh8cpugt06p1m5j1ip4l8prk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

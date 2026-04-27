@@ -1,17 +1,64 @@
-# babibeauty_app
+#  BabiBeauty Mobile App
 
-A new Flutter project.
+A Flutter mobile application that allows users to explore beauty services, book appointments, and purchase products   user-friendly.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀Features
 
-A few resources to get you started if this is your first Flutter project:
+-  User Authentication (Login & Register) Firebase
+-  Browse Beauty Services
+-  Browse Products
+-  Booking System 
+-  Favorites System
+-  Cart & Checkout
+-  Orders Management
+-  Push Notifications (Firebase + Local Notifications)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies Used
+
+- Flutter (Dart)
+- Firebase Authentication
+- Firebase Cloud Messaging (FCM)
+- REST APIs
+- SharedPreferences (Local Storage)
+- GoRouter (Navigation)
+
+---
+
+## Screens
+
+- Login Screen
+- Register Screen
+- Home Screen
+- Services Screen
+- Products Screen
+- Booking Screen
+- Favorites Screen
+- Cart & Orders
+
+---
+
+##  UI/UX Design
+
+The application UI/UX was designed using clean and simple layouts focusing on user-friendly navigation and modern beauty theme.
+
+---
+
+##  Testing
+
+The application was tested manually to ensure all functionalities work correctly, including authentication, booking, cart, and notifications.
+
+---
+
+##  Installation
+
+To run the project locally:
+
+```bash
+git clone https://github.com/halamatni12/babivoyage_project.git
+cd babibeauty_app
+flutter pub get
+flutter run
