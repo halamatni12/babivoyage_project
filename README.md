@@ -39,13 +39,13 @@ A Flutter mobile application that allows users to explore beauty services, book 
 - Favorites Screen
 - Cart & Orders
 
----
 
-##  UI/UX Design
+## 🎨 UI/UX Design
 
-The application UI/UX was designed using clean and simple layouts focusing on user-friendly navigation and modern beauty theme.
+You can view the UI/UX design here:
+https://mockitt.com/design/share/ubB7W3te69ctjim2NsAd
 
----
+
 
 ##  Testing
 
