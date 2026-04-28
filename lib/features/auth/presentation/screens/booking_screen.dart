@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:firebase_auth/firebase_auth.dart'; // 🔥 NEW
 import 'package:babibeauty_app/features/auth/data/services/notification_service.dart';
 import '../../data/booking/booking_service.dart';
 
@@ -29,8 +30,16 @@ class _BookingScreenState extends State<BookingScreen> {
     load();
   }
 
+  /// 🔥 LOAD ONLY CURRENT USER BOOKINGS
   void load() async {
-    bookings = await service.get();
+    final user = FirebaseAuth.instance.currentUser;
+
+    final allBookings = await service.get();
+
+    bookings = allBookings
+        .where((b) => b["userId"] == user!.uid)
+        .toList();
+
     setState(() {});
   }
 
@@ -62,6 +71,7 @@ class _BookingScreenState extends State<BookingScreen> {
     );
   }
 
+  /// 🔥 ADD BOOKING WITH USER ID
   void addBooking() async {
     if (nameController.text.isEmpty ||
         phoneController.text.isEmpty ||
@@ -73,7 +83,7 @@ class _BookingScreenState extends State<BookingScreen> {
       return;
     }
 
-    final bookingDateTime = getFullDateTime();
+    final user = FirebaseAuth.instance.currentUser;
 
     final reminderTime = DateTime.now().add(const Duration(seconds: 5));
 
@@ -84,6 +94,7 @@ class _BookingScreenState extends State<BookingScreen> {
     );
 
     await service.add({
+      "userId": user!.uid, // 🔥 IMPORTANT FIX
       "service": widget.serviceName,
       "name": nameController.text,
       "phone": phoneController.text,
@@ -209,18 +220,6 @@ class _BookingScreenState extends State<BookingScreen> {
             ),
             onPressed: addBooking,
             child: const Text("Confirm Booking"),
-          ),
-
-          const SizedBox(height: 15),
-
-          ElevatedButton(
-            onPressed: () {
-              NotificationService.show(
-                "TEST 🔥",
-                "This should appear immediately",
-              );
-            },
-            child: const Text("Test Notification"),
           ),
 
           const SizedBox(height: 25),
